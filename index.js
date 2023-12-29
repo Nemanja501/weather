@@ -36,7 +36,7 @@ function displayWeatherData(days){
     const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     const boxes = document.querySelectorAll(".box");
     for (let i = 0; i < boxes.length; i++) {
-        const dayDisplay = boxes[i].getElementsByTagName('h3');
+        const dayDisplay = boxes[i].getElementsByTagName('h3')[0];
         const tempDisplay = boxes[i].querySelector("#temp");
         tempDisplay.innerHTML = days[i].main.temp;
         dayDisplay.innerHTML = dayNames[days[i].date_time.getDay()];
